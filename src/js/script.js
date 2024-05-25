@@ -61,10 +61,10 @@ function showInfo(json) {
         "#temp_img"
     ).src = `https://openweathermap.org/img/wn/${json.temp_icon}.png`;
 
-    document.querySelector("#wind_speed").innerHTML = `${json.windSpeed.toFixed(
+    document.querySelector("#wind").innerHTML = `${json.windSpeed.toFixed(
         1
-    )} Km/h`;
-    document.querySelector("humidity").innerHTML = `${json.humidity}%`;
+    )}km/h`;
+    document.querySelector("#humidity").innerHTML = `${json.humidity}%`;
 }
 
 function showAlert(msg) {
