@@ -26,8 +26,11 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
             temp_icon: json.weather[0].icon,
             windSpeed: json.wind.speed,
             humidity: json.main.humidity,
+            
         });
+        document.querySelector("#alert").classList.remove("show");
     } else {
+        document.querySelector("#alert").classList.add("show");
         showAlert("Cidade não encontrada");
     }
 });
